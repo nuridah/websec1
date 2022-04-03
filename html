@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=email], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#mphone1{
+  width: 15%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#mphone2{
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#hphone1{
+  width: 15%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+#hphone2{
+  width: 40%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.input-error{
+    outline: 1px solid red;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Student Details</h2>
+
+<div class="container">
+  <form id="myform">
+  <div class="row">
+    <div class="col-25">
+      <label for="sname">Name (Legal/Official)</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="sname" name="sname" maxlength="30" pattern="[A-Za-z]" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="matricno">Matric No</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="matricno" name="matricno" minlength="7" maxlength="7" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="caddress">Current Address</label>
+    </div>
+    <div class="col-75">
+      <textarea id="caddress" name="caddress" style="height:200px" maxlength="255" required></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="haddress">Home Address</label>
+    </div>
+    <div class="col-75">
+      <textarea id="haddress" name="haddress" style="height:200px" maxlength="255" required></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="email">Email (Gmail Account)</label>
+    </div>
+    <div class="col-75">
+      <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9]+@gmail\.com$" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="mphone1">Mobile Phone No</label>
+    </div>
+    <div class="col-75">
+      <select id="mphone1" name="mphone1" style="weight:20px" required>
+        <option value="010">010</option>
+        <option value="010">011</option>
+        <option value="012">012</option>
+        <option value="013">013</option>
+        <option value="014">014</option>
+        <option value="015">015</option>
+        <option value="016">016</option>
+        <option value="017">017</option>
+        <option value="018">018</option>
+        <option value="019">019</option>
+      </select>
+      - <input type="text" id="mphone2" name="mphone2" minlength="7" maxlength="8" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="hphone">Home Phone No (Emergency)</label>
+    </div>
+    <div class="col-75">
+      <select id="hphone1" name="hphone1" style="weight:20px" required>
+        <option value="010">010</option>
+        <option value="010">011</option>
+        <option value="012">012</option>
+        <option value="013">013</option>
+        <option value="014">014</option>
+        <option value="015">015</option>
+        <option value="016">016</option>
+        <option value="017">017</option>
+        <option value="018">018</option>
+        <option value="019">019</option>
+      </select>
+      - <input type="text" id="hphone2" name="hphone2" minlength="7" maxlength="8" required>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+</body>
+</html>
